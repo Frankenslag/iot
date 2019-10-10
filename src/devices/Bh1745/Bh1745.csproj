@@ -4,11 +4,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <!--Disabling default items so samples source won't get build by the main library-->
     <EnableDefaultItems>false</EnableDefaultItems>
-<<<<<<< HEAD:src/devices/Mcp3xxx/Mcp3xxx.csproj
-    <LangVersion>preview</LangVersion>
-=======
     <LangVersion>8</LangVersion>
->>>>>>> upstream/master:src/devices/Bh1745/Bh1745.csproj
   </PropertyGroup>
 
   <ItemGroup>
