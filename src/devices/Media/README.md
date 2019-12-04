@@ -1,4 +1,5 @@
-# Media
+# Still image recording library
+
 The project currently includes `VideoDevice`.
 
 ## Precondition
@@ -12,4 +13,11 @@ The project currently includes `VideoDevice`.
 2. Install `System.Drawing` native dependencies.
     ```
     sudo apt-get install libc6-dev libgdiplus libx11-dev
+    ```
+
+### SoundDevice
+
+1. Install `libasound2-dev`.
+    ```
+    sudo apt-get install libasound2-dev
     ```

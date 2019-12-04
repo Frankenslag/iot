@@ -1,21 +1,23 @@
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dotnet/iot)
+
 # .NET Core IoT Libraries
 
 .NET Core can be used to build applications for [IoT](https://en.wikipedia.org/wiki/Internet_of_things) devices and scenarios. IoT applications typically interact with sensors, displays and input devices that require the use of [GPIO pins](https://en.wikipedia.org/wiki/General-purpose_input/output), serial ports or similar hardware.
 
 This repository contains the [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio) library and implementations for various boards like [Raspberry Pi](https://www.raspberrypi.org/) and [Hummingboard](https://www.solid-run.com/nxp-family/hummingboard/).
 
-The repository also contains [IoT.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings), a growing set of community-maintained [device bindings](src/devices/README.md) for IoT components.
+The repository also contains [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings), a growing set of community-maintained [device bindings](src/devices/README.md) for IoT components.
 
 **NOTE**: This repository is still in experimental stage and all APIs are subject to changes.
 
 # How to Install
 
-You can install the latest daily pre-release build of the .NET Core System.Device.Gpio and IoT.Device.Bindings NuGet packages from the blob feed.
+You can install the latest daily pre-release build of the .NET Core System.Device.Gpio and Iot.Device.Bindings NuGet packages from the blob feed.
   
 ## NuGet.exe
 ~~~~
 nuget install System.Device.Gpio -PreRelease -Source https://dotnetfeed.blob.core.windows.net/dotnet-iot/index.json
-nuget install IoT.Device.Bindings -PreRelease -Source https://dotnetfeed.blob.core.windows.net/dotnet-iot/index.json
+nuget install Iot.Device.Bindings -PreRelease -Source https://dotnetfeed.blob.core.windows.net/dotnet-iot/index.json
 ~~~~
 ### Official Build Status
 ![BuildStatus](https://dev.azure.com/dnceng/internal/_apis/build/status/dotnet/iot/dotnet.iot-official?branchName=master)
@@ -23,7 +25,7 @@ nuget install IoT.Device.Bindings -PreRelease -Source https://dotnetfeed.blob.co
 ## .NET CLI
 ~~~~
 dotnet add package System.Device.Gpio --source https://dotnetfeed.blob.core.windows.net/dotnet-iot/index.json
-dotnet add package IoT.Device.Bindings --source https://dotnetfeed.blob.core.windows.net/dotnet-iot/index.json
+dotnet add package Iot.Device.Bindings --source https://dotnetfeed.blob.core.windows.net/dotnet-iot/index.json
 ~~~~
 
 # Contributing
