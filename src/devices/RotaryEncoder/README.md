@@ -1,13 +1,14 @@
 ﻿# Quadrature Rotary Encoder
 
 ## Summary
+
 A Rotary encoder is a device that detects angular position. One use of this is similar to a volume control on an FM radio where the user turns a shaft and the loudness of the broadcast is changed. Incremental rotary encoders do not provide information on their exact position but supply information about how much they have moved and in which direction.
 
-![](pec11r.png)
+![rotary](pec11r.png)
 
 Typically a quadrature rotary encoder will have two outputs A and B, perhaps called clock and data. For each part of a rotation then the A pin will provide a clock signal and the B pin will provide a data signal that is out of phase with the clock. The sign of the phase difference between the pins indicates the direction of rotation.
 
-![](encoder.png)
+![encoder description](encoder.png)
 
 From above if we look at Pin B (data) at the time of a falling edge on Pin A (clk) then the if the value of pin P is 1 then the direction is clockwise and if it is 0 then the rotation is counter clockwise.
 
@@ -37,3 +38,13 @@ This binding also features
 - Events when the value changes.
 
 Also available is a `QuadratureRotaryEncoder` binding which has properties that represent the rotatation of the encoder and the raw pulses.
+
+## Limitations
+
+As this implementation uses normal GPIO controller, the precision is limited and it does fit mainly manual encoders. You may use it as well with motors if the rotation is not too fast or if you don't car much about the precision.
+
+It is hard to give absolute numbers for the precision and speed of turning. This depends of the processor and the low level hardware driver and its implementation. 
+
+If you need real time and high precision to do motor aservisment for example, we recommend you to use a real time PIC or Arduino or anything equivalent which is dedicated and will allow to handle interruption for a precise reading. You can even read the data from your real time system from .NET Core IoT using SPI or I2C or SerialPort depending on your real time implementation.
+
+You will find an example with a manual rotary from [Sparkfun, the TINY84A](https://www.sparkfun.com/products/15083).
